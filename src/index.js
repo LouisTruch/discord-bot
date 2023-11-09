@@ -122,5 +122,5 @@ client.on('messageCreate', (msg) => {
   }
 })
 
-client.login(
-    'MTE1Mjk1MzQ3ODM2NTMyMzM1NA.GKLVFf.QgWLTFWjNVxtMf0iZIbF-WKB-KChH-_75Z68aM');
+const botToken = process.env.BotToken;
+client.login(botToken);
