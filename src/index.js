@@ -16,7 +16,6 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/auth/redirect', async (req, res) => {
-  //   res.send('redirecting...');
   const {code} = req.query;
   if (code) {
     const formData = new url.URLSearchParams({
@@ -92,6 +91,11 @@ const client = new Client({
 
 client.on('ready', (c) => {
   console.log('42 Stalker online');
+
+  //   const gavCommand = new
+  //   SlashCommandBuilder().setName('GAV').setDescription( 'Regarde quels
+  //   soldats sont à l\'école');
+  //   client.application.commands.create(gavCommand);
 })
 
 client.on('messageCreate', (msg) => {
